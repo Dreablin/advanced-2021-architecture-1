@@ -5,7 +5,10 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
+import androidx.test.uiautomator.UiObject2
 import androidx.test.uiautomator.Until
+import org.hamcrest.CoreMatchers.`is`
+import org.hamcrest.CoreMatchers.equalTo
 import org.hamcrest.CoreMatchers.notNullValue
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Before
@@ -42,7 +45,8 @@ class UiAutomatorSampleTest {
         // Launch the app
         val context = ApplicationProvider.getApplicationContext<Context>()
         val intent = context.packageManager.getLaunchIntentForPackage(
-            BASIC_SAMPLE_PACKAGE)?.apply {
+            BASIC_SAMPLE_PACKAGE
+        )?.apply {
             // Clear out any previous instances
             addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
         }
@@ -54,8 +58,22 @@ class UiAutomatorSampleTest {
             LAUNCH_TIMEOUT
         )
     }
+
     @Test
     fun sampleTest() {
 
+        val searchField: UiObject2 = device.findObject(By.res(BASIC_SAMPLE_PACKAGE, "searchInput"))
+        val searchButton: UiObject2 = device.findObject(By.res(BASIC_SAMPLE_PACKAGE, "searchIcon"))
+        if (searchField.isEnabled && searchButton.isEnabled) {
+            searchField.setText("Duna")
+            searchButton.click()
+        }
+
+        val cardText: UiObject2 = device
+            .wait(
+                Until.findObject(By.res(BASIC_SAMPLE_PACKAGE, "movieName")),
+                500 /* wait 500ms */
+            )
+        assertThat(cardText.text.lowercase(), `is`(equalTo("duna")))
     }
 }
