@@ -9,6 +9,8 @@ This workshop consists of 3 main parts:
 2) Writing PageObject (KScreen in terms of Kaspresso) for existing test steps. Have a passing test as an outcome.
 3) Writing test actions for existing PageObject and existing assistant actions. Have also the passed test as an outcome.
 
+If you have any troubles, you can find a solution in [kaspresso-solution branch](https://github.com/Android-Academy-Global/advanced-2021-architecture-1/tree/kaspresso-solution/app/src/androidTest/java)
+
 ## Part1: Launch SampleTest
 
 ### Open `SampleTest.kt`
