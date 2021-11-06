@@ -5,13 +5,13 @@ This is a branch for starting the Workshop after the Kaspresso part of the lectu
 ## Agenda
 
 This workshop consists of 3 main parts:
-1) Launch `SampleTest` to ensure, you have set up the environment for launching UI-tests correctly.
-2) Writing PageObject (KScreen in terms of Kaspresso) for existing test steps. Have a passing test as an outcome.
-3) Writing test actions for existing PageObject and existing assistant actions. Have also the passed test as an outcome.
+- Launch `SampleTest` to ensure, you have set up the environment for launching UI-tests correctly.
+- Writing PageObject (KScreen in terms of Kaspresso) for existing test steps. Have a passing test as an outcome.
+- Writing test actions for existing PageObject and existing assistant actions. Have also the passed test as an outcome.
 
 If you have any troubles, you can find a solution in [kaspresso-solution branch](https://github.com/Android-Academy-Global/advanced-2021-architecture-1/tree/kaspresso-solution/app/src/androidTest/java)
 
-## Part1: Launch SampleTest
+## Prepare: Launch SampleTest
 
 ### Open `SampleTest.kt`
 To find the test file you can either
