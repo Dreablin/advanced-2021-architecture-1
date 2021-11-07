@@ -1,15 +1,11 @@
 <resources>
     <string name="app_name">The Movie Db</string>
     <string name="movies_placeholder">Start typing in a search bar to find a movie</string>
-    <string name="error_unknown_on_download">Unexpected error while trying to fetch movies!</string>
     <string name="search_error">Something went wrong when downloading videos. Please, check your connection and try again</string>
     <string name="empty_result">No results matching your query</string>
     <string name="content_cinema_poster">Cinema poster</string>
     <string name="hint_search_query">Enter search query…</string>
     <string name="search_icon">Search icon</string>
-
-    <string name="movie_details_title">Movie: %1$d, %2$s</string>
-    <string name="movie_details_back_btn">back</string>
 
     <string name="email">E-mail</string>
     <string name="auth">Auth</string>
@@ -20,7 +16,6 @@
     <string name="unknown_error">Unknown error</string>
     <!--Review-->
 
-    <string name="review_button_rate_movie">Leave you review</string>
     <string name="review_what_did_you_like">What did you like?</string>
     <string name="review_what_did_not_like">What you did not like?</string>
     <string name="review_rating_message">Rate movie:</string>

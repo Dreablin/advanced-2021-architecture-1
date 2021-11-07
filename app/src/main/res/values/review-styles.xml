@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="ReviewTextInputLayout" />
-
     <style name="ReviewEditText">
         <item name="android:background">@drawable/bg_search</item>
         <item name="android:paddingTop">@dimen/space_normal</item>

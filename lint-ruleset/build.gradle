@@ -1,0 +1,28 @@
+plugins {
+    id 'kotlin'
+}
+
+ext {
+    versions = [
+            lint  : "27.2.2",
+            junit5: "5.8.1"
+    ]
+}
+
+dependencies {
+    compileOnly "com.android.tools.lint:lint-api:$versions.lint"
+
+    testImplementation "com.android.tools.lint:lint-tests:$versions.lint"
+    testImplementation "com.android.tools.lint:lint:$versions.lint"
+
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$versions.junit5"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$versions.junit5"
+}
+
+tasks.withType(Jar) {
+    manifest.attributes["Lint-Registry-v2"] = "com.example.ruleset.ExampleIssueRegistry"
+}
+
+tasks.withType(Test) {
+    useJUnitPlatform()
+}
