@@ -1,5 +1,7 @@
 package ru.gaket.themoviedb.tests
 
+import androidx.test.espresso.action.ViewActions.clearText
+import androidx.test.espresso.action.ViewActions.click
 import androidx.test.rule.ActivityTestRule
 import com.kaspersky.kaspresso.testcases.api.testcase.TestCase
 import dagger.hilt.android.testing.HiltAndroidRule
@@ -64,7 +66,7 @@ class SampleTest : TestCase() {
                 // 1. Uncomment code inside this step - it will be red at first
                 // 2. Create a `MovieScreen` class - page object for `MovieDetailsFragment` - it should make test passing
                 step("Check film details screen") {
-                    /*MovieScreen {
+                    MovieScreen {
                         title {
                             isVisible()
                             hasText("Duna")
@@ -75,44 +77,45 @@ class SampleTest : TestCase() {
                         image {
                             isVisible()
                         }
-                    }*/
+                    }
                 }
                 // 3. Uncomment code inside this step - it will be red at first
                 // 4. Add `loginButton` to MovieScreen - it should make test passing
                 step("Open Login") {
-                    /*MovieScreen {
+                    MovieScreen {
                         loginButton {
                             isVisible()
                             click()
                         }
-                    }*/
+                    }
                 }
                 // Workshop part 2 - writing Test
                 // To complete you need
                 // 1. Uncomment existing code inside this step.
                 // There was intentionally left spaces to fill them and make test passing.
                 step("Login") {
-                    /*AuthScreen {
-                        // TODO
+                    AuthScreen {
+                        emailInput.edit.typeText("test")
                         authButton.click()
                         emailInput.hasError(R.string.email_input_error)
-                        // TODO
+                        emailInput.edit.clearText()
+                        emailInput.edit.typeText("test@test.com")
                         authButton.click()
                         passwordInput.hasError(R.string.password_input_error)
-                        // TODO
+                        passwordInput.edit.typeText("Password")
                         authButton.click()
                         // the login here should be completed, however we will check it in the next step
-                    }*/
+                    }
                 }
                 // 2. Uncomment existing code inside this step.
                 // 3. Add `addReview` to MovieScreen - it should make test passing
                 step("Check film details screen contains `Add review`") {
-                    /*MovieScreen {
+                    MovieScreen {
                         addReview {
                             isVisible()
                             containsText("Add review")
                         }
-                    }*/
+                    }
                 }
             }
 }
