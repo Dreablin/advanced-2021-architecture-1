@@ -94,7 +94,7 @@ At this step, we will write a PageObject (KScreen in terms of Kaspresso) for `Mo
 
 1) Find `MainScreen.kt`, see its structure if forgotten from the lecture.
 2) Put the new `MovieScreen.kt` file in the same directory.
-3) Make `MovieScreen` class extending `KScreen<MainScreen>`
+3) Make `MovieScreen` class extending `KScreen<MovieScreen>`
 4) Override necessary values for `KScreen`: `layoutId` and `viewClass`. These are some pointers to help support this class in the future.
 5) For our case `layoutId` should have `R.layout.movies_fragment` and `viewClass` link to `MoviesFragment::class.java`
 6) Return to `SampleTest.kt`. Now `MovieScreen` should not be red anymore except elements.
